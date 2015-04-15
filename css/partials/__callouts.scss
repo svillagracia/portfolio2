@@ -1,0 +1,80 @@
+/* Callout banner: Homepage
+******************************************************/
+.callout {
+    width: 100%;
+    max-width: 950px;
+    @include flex(1 0 auto);
+    @include align-self(center);
+    @include mq($until: tablet) {
+    order:1;
+  }
+
+
+  &--content {
+    text-align:center;
+    color: #eee;
+    padding: 75px 20px;  
+
+    h1 {
+      font-size: 32px;
+      font-family: $proxima;
+      margin-bottom: 10px;
+    }
+
+    .callout--tagline {
+      font-size: 18px;
+      font-weight: 100;
+      font-family: $opensans;
+      color: #eee;
+
+    }
+
+    button {
+      margin: 40px auto 15px;
+      display:block;
+    }
+
+    .callout--link {
+      text-align:center;
+      font-style: italic;
+      font-size: 12px;
+      font-family: $opensans;
+      color: #fff;
+
+      a {
+        color: #ddd;
+        text-decoration:none;
+        font-weight: 500;
+        &:hover {
+          text-decoration:underline;
+          color: #aaa;
+        }
+      }
+    }
+  }
+}
+
+/* Callout banner: Subpages 
+******************************************************/
+.callout.callout--subpages {
+
+  h1 {
+    margin-left: 15px;
+    font-size: 4rem;
+    color: #000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: $proxima;
+  }
+
+  p {
+    width: 95%;
+    font-size: 18px;
+    margin: 0 auto 5px;
+    line-height: 32px;
+    font-weight: 300;
+    color: #000;
+    max-width: 900px;
+    font-family: $opensans;
+  }
+}

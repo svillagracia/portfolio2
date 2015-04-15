@@ -1,0 +1,258 @@
+/* Header Splash
+****************************************/
+.wrapper--splash {
+  @include flexbox();
+  @include flex-flow(column);
+  @include mq($until: tablet) {
+    @include flex-flow(column);  
+  }
+  @include border-radius(4px 4px 0 0);
+  height: 400px;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  top: 75px;
+
+  &__frontpage {
+    background: #838687;background: -moz-linear-gradient(top,  #838687 0%, #343847 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#838687), color-stop(100%,#343847));background: -webkit-linear-gradient(top,  #838687 0%,#343847 100%);background: -o-linear-gradient(top,  #838687 0%,#343847 100%);background: -ms-linear-gradient(top,  #838687 0%,#343847 100%);background: linear-gradient(to bottom,  #838687 0%,#343847 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#838687', endColorstr='#343847',GradientType=0 );
+    background: url(../img/splash_frontpage-dark.jpg) 0px -240px no-repeat;
+    background-size: cover;
+  }
+
+  &__frontpage {
+    .callout {
+
+
+    }
+  }
+}
+
+.wrapper {
+  margin-top: 450px;
+  width: 100%;
+  max-width: 100%;
+  background: #fff;
+  @include box-shadow(0 0 11px 0px #000);
+  border-top: 0 !important;
+}
+
+.highlights,
+.features,
+.testimonials {
+  width: 100%;
+  max-width: 950px;
+  max-width: 95rem;
+  margin: 0 auto;
+}
+
+/* Highlight Bubbles on the frontpage
+**********************************************************/
+.highlights {
+  @include flexbox();
+  @include flex-flow(row wrap);
+  @include border-radius(0);
+  padding-top: 30px;
+
+  header {
+    @include flex(1 0 100%);
+    width: 100%;
+
+    text-align:center;
+
+    h2 {
+      font-size: 3.2rem;
+      font-family: $proxima;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 1.8rem;
+      font-family: $opensans;
+      font-weight: 100;
+      color: #aaa;
+    }
+  } 
+ 
+
+  .highlights--bucket {
+    @include flex(1 0 30%);
+    @include border-radius(10px);
+    background: #fff;
+    margin: 10px;
+    text-align:center;
+    padding: 15px;
+
+    img {
+      width: 100px;
+      display:block;
+      margin: 0 auto;
+    }
+
+    h3 {
+      font-size: 1.8rem;      
+      color: #222;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.5rem;
+      text-align: justify;
+      font-family: $proxima;
+      font-weight:100;
+      line-height: 2.5rem;
+      color: #666;
+    }
+  }
+
+}
+
+
+/* Features Blurbs 
+***********************************************************/
+.features { 
+  @extend .highlights;
+  background: #fff;
+  margin-top: 75px;
+  padding: 0;
+  @include flexbox();
+  @include flex-flow(column);
+
+  .features--type {
+    @include flexbox();
+    @include flex-flow(row nowrap);
+    margin-bottom: 5rem;
+
+    .features--type__image {
+      @include flex(1);
+      @include align-self(flex-end);
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .features--type__text {
+      @include flex(1);
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+      h3 {
+        font-size: 3rem;
+        font-family: $proxima;
+        margin-bottom: 0;
+      }
+  
+      p {
+        font-size: 1.6rem;
+        line-height: 3rem;
+        font-weight: 300;
+        font-family: $opensans;
+      }
+    }
+  }
+}
+
+
+/* Bucket Quotes: Header / Sub-header
+***********************************************************/
+.testimonials {
+  @extend .highlights;
+  background: #fff;
+
+  .frontpage--header {
+    @include flex(1 0 100%);
+    width: 100%;
+
+    h2 {
+      margin-top: 75px;
+      color: #222;
+    }
+  
+    p {
+      color: #aaa;
+    }
+  }
+}
+
+/* Bucket Quotes: Chat bubble arrows & Bubble container
+*********************************************************/
+.testimonials--buckets {
+  @include flexbox();
+  @include flex-flow(row nowrap);
+
+  padding-bottom: 50px;
+
+  @include breakpoint(small) {
+    @include flex-flow(column);  
+  }
+
+  > div {
+    @include flex(1);
+    position:relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 20px;
+      border-top: 20px solid #d3e9ef;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent; 
+    }
+
+    &:first-child {
+      margin-right: 10px;
+    }
+    &:last-child {
+      margin-left: 10px;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 87%;
+        border-top: 20px solid #d3e9ef;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent; 
+      }
+    }
+  }
+
+  .testimonials--buckets__quote {
+    @include border-radius(4px);
+    background: #d3e9ef;
+    font-size: 1.5rem;
+    font-family: $proxima;
+    font-weight: 100;
+    line-height: 2.7rem;
+    text-align: justify;
+    line-height: 2.5rem;
+    position:relative;
+    padding: 20px;
+  }
+}
+
+
+/* Bucket Quotes: Signature 
+****************************************/  
+.testimonials--buckets {    
+  .testimonials--buckets__signature {
+    position:absolute;
+    left: 65px;
+    bottom: -25px;
+    font-weight:bold;
+    font-size: 1.3rem;
+    
+    i {
+      font-weight: 300;
+      font-style:italic;
+      font-size: 1.2rem;
+    }
+  }
+
+  > div:last-child {
+    .testimonials--buckets__signature {
+      right: 65px;
+      text-align:right;
+    }
+  }
+}

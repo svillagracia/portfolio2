@@ -1,0 +1,210 @@
+/* Header 
+****************************************/
+nav.header {
+  background: rgba(255,255,255,.9);
+  @include box-shadow(0 0 3px 1px #555);
+  position:fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+
+  &.header--clone {
+    background: #fff;
+    z-index: 2000;
+  }
+
+  &.header--unstick {
+    display:none;
+  }
+}
+
+.navigation {     // Navigation container
+  font-family: $proxima;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 0px;
+
+  z-index: 100;
+
+  img {
+    @include flex(1);
+    min-width: 150px;
+    width: auto;
+    max-width: 150px;
+    height: 75px;
+    margin: 0 25px;
+  }
+
+  > ul {
+    @include flexbox();
+    @include flex-flow(row nowrap);
+    margin: 0;
+    
+    > li {
+      @include flex(1 0 auto);
+      display:inline-block;
+
+      &:first-child {
+        @include flex(1 0 100px);
+      }
+    }
+  }
+}
+
+/* Navigation: Trial Signup Toggle
+**************************************************/
+nav.header .navigation--trial {
+  display:none;
+}
+
+nav.header--clone .navigation--trial {
+  display:block;
+
+  ul {
+    top: 5px;
+  }
+}
+
+
+/* Accordion Navigation
+**************************************************/
+.navigation--sub {    // Top level links of each category
+  list-style: none;
+  padding: 0;
+  height: 30px;
+  margin-top: 25px;
+  position: relative; 
+  z-index: 100;
+  padding-left: 0;
+  top: 10px;
+
+
+  a.main {
+    display: block; 
+    height: 40px;
+    text-align: center; 
+    text-decoration: none; 
+    color: #555;  
+    font-family: $proxima;
+    font-size: 14px;
+    font-weight: 700;
+    @include simpleTransition(0 ease-in-out);
+    position: relative;
+    z-index: 100;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #222;
+    }
+  }
+
+  &__current > a {
+    font-weight: 700 !important;
+    color: #222 !important;
+  }
+}
+
+.navigation--sub li {     // Sub navigation items.
+  height: 37px;
+  font-family: $proxima;
+  font-weight: 300;
+  font-size: 14px;
+  color: #222;
+  text-align: center;
+  margin: 0;
+  -webkit-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform: perspective(350px) rotateX(-90deg);
+  -o-transform: perspective(350px) rotateX(-90deg);
+  transform: perspective(350px) rotateX(-90deg);
+  border-bottom:  solid 1px #aaa;
+  margin: 0 5px;
+  background: rgba(255,255,255,.9);
+
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+
+  &:hover {
+    background: rgba(255,255,255,1);
+  }
+
+  &.n1 {
+    @include border-radius(0);
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #555;
+    @include border-radius(0 0 6px 6px);
+  }
+
+  a {
+    color: #222;
+    text-decoration:none;
+    font-family: $proxima;
+    display: block;
+    padding-top: 9px;
+  }
+}
+
+.header--clone .navigation--sub li {
+  background: rgba(255,255,255,1);
+}
+
+// Sub navigation items: Effects on mouse out
+.navigation--sub li.n1 { @include simpleTransition(.1s linear .5s); }
+.navigation--sub li.n2 { @include simpleTransition(.1s linear .3s); }
+.navigation--sub li.n3 { @include simpleTransition(.1s linear .2s); }
+.navigation--sub li.n4 { @include simpleTransition(.1s linear .1s); }
+.navigation--sub li.n5 { @include simpleTransition(.1s linear .0s);
+                         @include border-radius(0 0 4px 4px); }
+
+// Sub navigation items: Effects on mouse over
+.navigation--sub:hover li {  -webkit-transform: perspective(350px) rotateX(0deg);
+                             -o-transform: perspective(350px) rotateX(0deg);
+                             transform: perspective(350px) rotateX(0deg);
+                             @include simpleTransition(.1s linear .0s); }
+.navigation--sub:hover .n2 { @include simpleTransition(.1s linear .1s); }
+.navigation--sub:hover .n3 { @include simpleTransition(.1s linear .2s); }
+.navigation--sub:hover .n4 { @include simpleTransition(.1s linear .3s); }
+.navigation--sub:hover .n5 { @include simpleTransition(.1s linear .4s); }
+
+
+
+
+
+
+
+/* Sticky Header 
+***********************************/
+.header--clone {    // Cloned header
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  @include opacity(0);
+  @include simpleTransition(all 250ms ease);
+  border-bottom: 1px solid #eee;
+  @include box-shadow(0 0 6px 1px #555);
+
+  .navigation {
+    padding-top: 0;
+
+    .navigation--login {
+      display:none;
+    }
+  }
+}
+
+.header--stick {  // Effect when screen hits the id="
+  display:block;
+  @include opacity(1);
+  @include simpleTransition(all 300ms ease-in-out);
+}
+
+.header--unstick {
+  z-index: -1; 
+  @include opacity(0);
+}

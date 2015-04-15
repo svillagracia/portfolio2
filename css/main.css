@@ -1,0 +1,177 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222; }
+
+html {
+  font-size: 62.5%;
+  line-height: 1.4rem; }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* Alternative style to default HR */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/* Remove default fieldset styles. */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* Allow only vertical resizing of textareas. */
+textarea {
+  resize: vertical; }
+
+/* == Browse Happy prompt */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* == Print styles. Inlined to avoid required HTTP connection: h5bp.com/r */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a, a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /** Don't show links for images, or javascript/internal links*/
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""; }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  tr, img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2, h3 {
+    page-break-after: avoid; } }
+/*** Fonts ******************************************************/
+/*** MIXIN: Flexbox ************************************************************/
+/* Vertical Align Mixin */
+/* Clearfix */
+.clearfix {
+  display: block;
+  clear: both; }
+
+/** Media Query Mixins, Breakpoints **/
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 200;
+  src: local("Segoe UI Light"); }
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 300;
+  src: local("Segoe UI Semilight"); }
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 400;
+  src: local("Segoe UI"); }
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 600;
+  src: local("Segoe UI Semibold"); }
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 700;
+  src: local("Segoe UI Bold"); }
+@font-face {
+  font-family: "Segoe UI";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Segoe UI Italic"); }
+@font-face {
+  font-family: "Segoe UI";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Segoe UI Bold Italic"); }
+/* Globals
+*************************************************/
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%;
+  font: 17px/1.4 'Segoie',sans-serif; }
+
+body {
+  background: #eee; }
+
+.wrapper {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 90%;
+  width: 950px;
+  margin: 0 auto 0;
+  color: #222;
+  background: #fff; }
+  .wrapper .header {
+    padding: 15px;
+    color: #fff;
+    background: #777; }
+    .wrapper .header h1 {
+      margin-top: 0; }
+
+/*# sourceMappingURL=main.css.map */
