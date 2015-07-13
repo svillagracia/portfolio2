@@ -1,20 +1,13 @@
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
-html,
-button,
-input,
-select,
-textarea {
+article, aside, details, figcaption, figure, footer, header, hgroup, hr, menu, nav, section {
+  display: block; }
+
+button, html, input, select, textarea {
   color: #222; }
 
 html {
-  font-size: 62.5%;
   line-height: 1.4rem; }
 
-/*
- * Remove text-shadow in selection highlight:
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none; }
@@ -23,47 +16,32 @@ html {
   background: #b3d4fc;
   text-shadow: none; }
 
-/* Alternative style to default HR */
 hr {
-  display: block;
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0; }
 
-/* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers */
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+audio, canvas, iframe, img, svg, video {
   vertical-align: middle; }
 
-/* Remove default fieldset styles. */
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0; }
-
-/* Allow only vertical resizing of textareas. */
 textarea {
   resize: vertical; }
 
-/* == Browse Happy prompt */
 .browsehappy {
-  margin: 0.2em 0;
+  margin: .2em 0;
   background: #ccc;
   color: #000;
-  padding: 0.2em 0; }
+  padding: .2em 0; }
 
-/* == Print styles. Inlined to avoid required HTTP connection: h5bp.com/r */
 @media print {
+  blockquote, img, pre, tr {
+    page-break-inside: avoid; }
+
   * {
-    background: transparent !important;
+    background: 0 0 !important;
     color: #000 !important;
-    /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
 
@@ -76,32 +54,50 @@ textarea {
   abbr[title]:after {
     content: " (" attr(title) ")"; }
 
-  /** Don't show links for images, or javascript/internal links*/
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
     content: ""; }
 
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
+  blockquote, pre {
+    border: 1px solid #999; }
 
   thead {
-    display: table-header-group;
-    /* h5bp.com/t */ }
-
-  tr, img {
-    page-break-inside: avoid; }
+    display: table-header-group; }
 
   img {
     max-width: 100% !important; }
 
   @page {
-    margin: 0.5cm; }
-  p, h2, h3 {
+    margin: .5cm; }
+  h2, h3, p {
     orphans: 3;
     widows: 3; }
 
   h2, h3 {
     page-break-after: avoid; } }
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 /*** Fonts ******************************************************/
 /*** MIXIN: Flexbox ************************************************************/
 /* Vertical Align Mixin */
@@ -151,27 +147,9 @@ textarea {
 html,
 body {
   height: 100%;
-  font: 17px/1.4 'Segoe UI', Verdana, Arial, sans-serif; }
+  font: 17px/1.4 'Segoe UI', 'Segoe', Verdana, Arial, sans-serif; }
 
 body {
   background: #eee; }
-
-.wrapper {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 90%;
-  width: 950px;
-  margin: 0 auto 0;
-  color: #222;
-  background: #fff; }
-  .wrapper .header {
-    padding: 15px;
-    color: #fff;
-    background: #777; }
-    .wrapper .header h1 {
-      margin-top: 0; }
 
 /*# sourceMappingURL=main.css.map */
