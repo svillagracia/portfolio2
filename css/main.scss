@@ -1,9 +1,11 @@
 // Mixins
-@import "partials/__reset.scss";             // Boilerplate globals
+@import "partials/__reset.scss";          // Boilerplate globals
 @import "partials/__mixins.scss";         // SASS Mixins
-@import "partials/__fonts-segoe";         // Fonts: Segoe UI
+@import "partials/__fonts-montserrat";    // Fonts: Segoe UI
 
 // Globals
 @import "partials/__globals.scss";        // Sitewide Globals.
 
 // Individual Pages
+@import "partials/__nav.scss";            // Navigation Styles
+@import "partials/__home.scss";           // Home Page Styles

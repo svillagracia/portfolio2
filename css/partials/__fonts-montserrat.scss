@@ -1,0 +1,40 @@
+$montserrat: 'Montserrat', sans-serif;
+
+@font-face {
+    font-family: "Montserrat UI";
+    font-weight: 200;
+    src: local("Montserrat UI Light");
+}
+@font-face {
+    font-family: "Montserrat UI";
+    font-weight: 300;
+    src: local("Montserrat UI Semilight");
+}
+@font-face {
+    font-family: "Montserrat UI";
+    font-weight: 400;
+    src: local("Montserrat UI");
+}
+@font-face {
+    font-family: "Montserrat UI";
+    font-weight: 600;
+    src: local("Montserrat UI Semibold");
+}
+@font-face {
+    font-family: "Montserrat UI";
+    font-weight: 700;
+    src: local("Montserrat UI Bold");
+}
+@font-face {
+    font-family: "Montserrat UI";
+    font-style: italic;
+    font-weight: 400;
+    src: local("Montserrat UI Italic");
+}
+@font-face {
+    font-family: "Montserrat UI";
+    font-style: italic;
+    font-weight: 700;
+    src: local("Montserrat UI Bold Italic");
+}
+

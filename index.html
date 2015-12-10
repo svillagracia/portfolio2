@@ -6,19 +6,22 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Indigo Slate Blank Template</title>
+    <title>Let's Build the Future</title>
+    <base href="/">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/lib/normalize.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/lib/animate.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
     <!-- saved from url=(0017)http://localhost/ -->
   </head>
-  <body>
+  <body ng-app="Portfolio">
   <!--[if lt IE 8]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
@@ -26,31 +29,41 @@
 
 
 
-
   <div class="wrapper">
-  
-    <section class="header">
-      <header>
-        <h1>Indigo Slate Blank Template</h1>
-      </header>
-    </section>
+
+    <div class="left-bar"
+         ng-controller="NavCtrl">
+      <ul class="left-bar--links">
+        <li class="left-bar--links__1">
+          <a href="/#/about">About</a>
+        </li>
+        <li class="left-bar--links__2">
+          <a href="/#/projects">Projects</a>
+        </li>
+        <li class="left-bar--links__3">
+          <a href="#">Resume</a>
+        </li>
+      </ul>
+    </div>
+
+    <ng-view></ng-view>
 
   </div>
-  
-  
-  <!-- Commenting for local dev 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  -->
-  
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
 
-  <!-- Insert Vendor Plugins Here 
-  <script src="vendor/"></script>
-  -->
+
+  <!-- Insert Vendor Plugins Here -->
+  <script type="text/javascript" src="js/lib/angular.js"></script>
+  <script type="text/javascript" src="js/lib/angular-route.js"></script>
+  <script type="text/javascript" src="js/lib/angular-resource.js"></script>
+  <!-- <script src="vendor/"></script> -->
 
   <!-- Custom JS -->
-  <script src="js/main.js"></script>
+  <script src="js/app/app.js"></script>
+  <script src="js/app/controllers/HomeCtrl.js"></script>
+  <script src="js/app/controllers/AboutCtrl.js"></script>
+  <script src="js/app/controllers/ProjectCtrl.js"></script>
+  <script src="js/app/controllers/NavCtrl.js"></script>
 
   </body>
 </html>

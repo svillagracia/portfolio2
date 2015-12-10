@@ -1,22 +1,37 @@
-/* Globals
+/* Globals GULP
 *************************************************/
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+$main: #FFFAD5;
+$sidebar: #DB9E36;
 
-html, 
-body { 
-  height: 100%; 
-  font: 17px/1.4 'Segoe UI', 'Segoe', Verdana, Arial, sans-serif;
-}
-
+html,
 body {
-  background: #fff;
+  height: 100%;
+  font: 17px/1.4 'Montserrat UI', 'Montserrat', Verdana, Arial, sans-serif;
 }
 
-.wrapper {                        // Wrapper around all block content
+.wrapper {  // Wrapper around all block content
+  height: 100vh;
 
+  .center {
+    height: 100vh;
+    float: right;
+    width: 85%;
+    background-color: $main;
+
+    &--main {
+      text-align: center;
+
+      &__name {
+        font-weight: 600;
+        margin-top: 25%;
+        font-size: 48px;
+      }
+    }
+  }
 }
 
