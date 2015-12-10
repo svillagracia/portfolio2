@@ -1,21 +1,21 @@
 {
   "name": "portfolio2.0",
   "version": "1.0.0",
-  "description": "Totally stripped template to use as a starting point for future websites",
+  "description": "Portfolio 2.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IndigoSlate/Blank-Template.git"
+    "url": "git+https://github.com/svillagracia/portfolio2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IndigoSlate/Blank-Template/issues"
+    "url": "https://github.com/svillagracia/portfolio2/issues"
   },
-  "homepage": "https://github.com/IndigoSlate/Blank-Template#readme",
+  "homepage": "https://github.com/svillagracia/portfolio2#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-sass": "^2.1.0",
