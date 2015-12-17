@@ -18,7 +18,14 @@
   "homepage": "https://github.com/svillagracia/portfolio2#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-bytediff": "^1.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify": "0.0.5",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-ngmin": "^0.3.0",
     "gulp-sass": "^2.1.0",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-strip-comments": "^1.1.1",
+    "gulp-uglify": "^1.5.1"
   }
 }
