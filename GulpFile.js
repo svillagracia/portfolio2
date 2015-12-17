@@ -30,13 +30,6 @@ gulp.task('transpile-js', function() {
     .pipe(gulp.dest(jsOut))
 });
 
-gulp.task('strip-ctrl', function() {
-  gulp.src('./src/js/app/controllers/*.js')
-    .pipe(strip())
-    .pipe(ngAnnotate())
-    .pipe(gulp.dest('./build/js/app/controllers'))
-});
-
 gulp.task('sass-compile', function() {
   gulp.src(scss)
     .pipe(sourcemaps.init())
